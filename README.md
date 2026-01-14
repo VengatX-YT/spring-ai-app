@@ -53,3 +53,4 @@ cd spring-ai-app
 | 10  |           Docker Model Runner           |        |   
 | 11  |        Use Multiple Model in App        |        |   
 | 12  |                Messages                 |        |   
+| 13  |             Prompt Template             |        |   
