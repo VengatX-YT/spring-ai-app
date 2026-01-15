@@ -2,7 +2,7 @@ package com.vengatx.myaiapp.modelproviders.ollama;
 
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.ai.ollama.api.OllamaApi;
-import org.springframework.ai.ollama.api.OllamaOptions;
+import org.springframework.ai.ollama.api.OllamaChatOptions;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +17,7 @@ public class OllamaCustomChatController {
         OllamaChatModel ollamaChatModel = OllamaChatModel.builder()
                 .ollamaApi(ollamaApi)
                 .defaultOptions(
-                        OllamaOptions.builder().model("gemma3:latest").build()
+                        OllamaChatOptions.builder().model("gemma3:latest").build()
                 ).build();
         return ollamaChatModel.call(query);
     }
